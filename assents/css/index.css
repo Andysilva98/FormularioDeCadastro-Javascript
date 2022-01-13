@@ -1,0 +1,64 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(240, 240, 240);
+}
+
+header {
+    background: linear-gradient(45deg, white, blue);
+}
+
+img {
+    width: 220px;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+main a {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: linear-gradient(45deg, white, blue);
+    margin: 20px 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bolder;
+    box-shadow: 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    text-align: left;
+    background-color: rgba(19, 58, 254, 0.982);
+    border-radius: 20px;
+    padding: 40px;
+    color: rgb(216, 216, 216);
+}
+
+
+th,
+td {
+    width: 200px;
+    padding: 10px 0;
+    border-bottom: 1px solid gray;
+}
+
+td:last-child {
+    text-align: center;
+    width: 140px;
+}
+
+
+@media screen and (max-width: 419px) {
+    table {
+        padding: 40px 10px;
+    }
+}

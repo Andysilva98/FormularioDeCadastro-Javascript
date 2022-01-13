@@ -1,0 +1,113 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(240, 240, 240);
+}
+
+header {
+    background: linear-gradient(45deg, white, blue);
+}
+
+img {
+    width: 220px;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+main a {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: linear-gradient(45deg, white, blue);
+    margin: 20px 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bolder;
+    box-shadow: 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 400px;
+    background-color: rgba(19, 58, 254, 0.982);
+    border-radius: 20px;
+    padding: 40px;
+    color: rgb(216, 216, 216);
+
+}
+
+form div {
+    width: 100%;
+    margin: 10px 0;
+    display: inline-block;
+    text-align: end;
+    font-size: 1.2em;
+}
+
+#name,
+#number {
+    width: 60%;
+    margin: 0 10px;
+    line-height: 20px;
+    border-radius: 20px;
+}
+
+
+form #inputRadio {
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+}
+
+button {
+    border-radius: 20px;
+    width: 100px;
+    padding: 5px;
+    background: linear-gradient(45deg, white, blue);
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 419px) {
+    form {
+        padding: 40px 10px;
+    }
+
+    form div {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    #name,
+    #number {
+        width: auto;
+        line-height: 20px;
+        border-radius: 20px;
+    }
+
+    label {
+        margin: 10px 10px;
+    }
+
+    form #inputRadio {
+        display: inline;
+        margin-left: 5px;
+    }
+
+    button {
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+    }
+}
