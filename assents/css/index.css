@@ -13,12 +13,12 @@ img {
     padding: 20px;
 }
 
-main {
+nav {
     display: flex;
     justify-content: center;
 }
 
-main a {
+nav a {
     color: black;
     text-transform: uppercase;
     text-decoration: none;
@@ -46,15 +46,33 @@ table {
 
 th,
 td {
-    width: 200px;
+    width: 160px;
     padding: 10px 0;
     border-bottom: 1px solid gray;
 }
 
-td:last-child {
+td:last-child,
+td:nth-child(3) {
     text-align: center;
-    width: 140px;
+
 }
+
+th:last-child {
+    text-align: center;
+}
+
+button {
+    color: black;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, white, blue);
+    padding: 5px;
+    border-radius: 20px;
+    font-weight: bolder;
+    box-shadow: 6px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
 
 
 @media screen and (max-width: 419px) {

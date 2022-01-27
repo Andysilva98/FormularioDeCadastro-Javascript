@@ -5,37 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assents/css/form.css">
+    <script src="form.js" defer></script>
     <title>Formulário de Cadastro</title>
 
 </head>
 <body>
     <header>
-        <img src="/img/newtab-logo.png" alt="Logo NewTab">
+        <img src="../img/newtab-logo.png " alt= "Logo NewTab">
     </header>
     <section>
         
-        <main>
-            <a href="index.html">Listagem</a>                      
+        <nav>
+            <a href="../../index.html">Listagem</a>                      
             <a href="form.html">Cadastrar</a>                      
-        </main>
+        </nav>
 
         <div id="container">
-           <form action="">
+           <form onsubmit="teste(event); return false;"  >
                <div>
-                   <label for="name">Nome:</label>
-                   <input type="text" id="name" required>
+                   <label for="nome">Nome:</label>
+                   <input type="text" id="nome" required>
                </div>
                <div>
                    <label for="number">Telefone:</label>
-                   <input type="number" id="number" required>
+                   <input type="number" id="tel" required>
                </div>
-               <div id="inputRadio">
+               <div id="xp">
                    <label for="">Experiência Prévia </label>
-                   <input type="radio"> <span>sim</span>
-                   <input type="radio"> <span>não</span>                   
+                   <input type="radio" class="xp" value="Sim" name="client" > <span>sim</span>
+                   <input type="radio" class="xp" value="Não" name="client"> <span>não</span>                   
                </div>
                <div>
-                   <button>Enviar</button>
+                    <input type="submit" name="Enviar" id="button">                  
                </div>
            </form>
         </div>

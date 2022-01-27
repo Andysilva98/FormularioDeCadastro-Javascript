@@ -13,12 +13,12 @@ img {
     padding: 20px;
 }
 
-main {
+nav {
     display: flex;
     justify-content: center;
 }
 
-main a {
+nav a {
     color: black;
     text-transform: uppercase;
     text-decoration: none;
@@ -40,6 +40,7 @@ form {
     background-color: rgba(19, 58, 254, 0.982);
     border-radius: 20px;
     padding: 40px;
+    padding-right: 80px;
     color: rgb(216, 216, 216);
 
 }
@@ -52,8 +53,8 @@ form div {
     font-size: 1.2em;
 }
 
-#name,
-#number {
+#nome,
+#tel {
     width: 60%;
     margin: 0 10px;
     line-height: 20px;
@@ -61,19 +62,20 @@ form div {
 }
 
 
-form #inputRadio {
+form #xp {
     display: inline-block;
     text-align: center;
     justify-content: center;
 }
 
-button {
+#button {
     border-radius: 20px;
     width: 100px;
     padding: 5px;
     background: linear-gradient(45deg, white, blue);
     font-size: 0.8em;
     font-weight: bold;
+    cursor: pointer;
 }
 
 
@@ -89,8 +91,8 @@ button {
         text-align: left;
     }
 
-    #name,
-    #number {
+    #nome,
+    #tel {
         width: auto;
         line-height: 20px;
         border-radius: 20px;
@@ -100,7 +102,7 @@ button {
         margin: 10px 10px;
     }
 
-    form #inputRadio {
+    form #xp {
         display: inline;
         margin-left: 5px;
     }
