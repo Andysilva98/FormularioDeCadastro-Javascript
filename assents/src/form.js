@@ -1,34 +1,56 @@
+let validaNome = document.getElementById('nome')
+validaNome.addEventListener('focus', e => {
+  e.preventDefault()
+  e.target.value = ''
+});
+validaNome.addEventListener('keypress', e => {
+  e.preventDefault()
+  if ((/[a-zA-Z ?]/).test(e.key)) {
+    e.target.value += e.key
+  }
+});
 
 
-function teste() {
+let validaTel = document.getElementById('tel')
+validaTel.addEventListener('focus', e => {
+  e.preventDefault()
+  e.target.value = ''
+});
+validaNome.addEventListener('keypress', e => {
+  e.preventDefault()
+  if ((/[0-9]/).test(e.key)) {
+    e.target.value += e.key
+  }
+});
+
+let url = new URL(window.location.href)
+let id = url.search.replace('?', '')
+
+
+
+function enviaForm(e) {
+  e.preventDefault()
   let nome = document.getElementById('nome')
   let tel = document.getElementById('tel')
   let xp = document.querySelector('input[name="client"]:checked');
-  let url = new URL(window.location.href)
-  let id = url.search.replace('?', '')
-
+  
   xp == null ? xp = '': false
  
-  validaForm(nome,tel,xp) 
+  validaForm(xp) 
  
   
   let valores = {
         nome: nome.value,
         tel: tel.value,
         xp: xp.value
-    }
-  //console.log(xp.value)
-    
+    }    
   
-    let dados = JSON.parse(localStorage.getItem("Cadastro"))
+  let dados = JSON.parse(localStorage.getItem("Cadastro"))
     
   if (dados == null) {
       localStorage.setItem('Cadastro', [])
       dados = [] 
   }
-
-
-
   
   if (id == '') {
    dados.push(valores)    
@@ -42,53 +64,34 @@ function teste() {
 }
 
 
+function validaForm(xp) {
+  let xpErro = document.querySelector('#xp')  
 
-
-function validaForm(nome,tel,xp) {
-  let nomeErro = document.querySelector('#areaNome')
-  let telErro = document.querySelector('#areaTel')
-  let xpErro = document.querySelector('#xp')
-  let regexNome = /([^a-zA-Z][\W]+)/.test(nome.value)
-  //regexNome.trim()
-   //ira verificar se o nome começa com numeros e buscara caracteres especiais, o trim() remove espaços desnecessarios
-  let regexTel = /[^0-9]+/.test(tel.value)
-
-
-  if (!regexNome) {
-    msgErro("oops!", nomeErro)
-    console.log(regexNome)
-  }
-   if (!regexTel) {
-    msgErro("Favor selecionar uma das opções acima!", telErro)
-  }
-   if (!xp.value) {
+  if (!xp.value) {
     msgErro("Favor selecionar uma das opções acima!", xpErro)
   } 
+  
 }
-
 
 function msgErro(msg, divErro) {
   let criaDiv =  document.createElement("div")
-  let texto = document.createTextNode(msg)
-  console.log(divErro)
-  
+  let texto = document.createTextNode(msg)  
+  criaDiv.classList.add('novaDiv')
 
-  if (divErro.lastChild.classList) {
-    document.querySelector('.novaDiv').remove()
 
-  }
+  if(Boolean(divErro.children[5])) divErro.children[5].remove()
+    
+    console.log(Boolean(divErro.children[5]))
     
     criaDiv.appendChild(texto)  
     divErro.appendChild(criaDiv)
-    criaDiv.classList.add('novaDiv')
+    
     criaDiv.style.color = 'red'
     criaDiv.style.fontSize = '16px'
     criaDiv.style.textAlign = 'center'
-    return false
+  
+    
 }
 
 
-
   
- 
-  console.log(/^[^a-zA-Z]/.test('9ae5- sf.'))
