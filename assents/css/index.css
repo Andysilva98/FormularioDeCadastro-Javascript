@@ -79,4 +79,17 @@ button {
     table {
         padding: 40px 10px;
     }
+
+    th {
+        font-size: 12px;
+    }
+
+    td {
+        font-size: 10px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 3px;
+    }
 }
